@@ -8,8 +8,18 @@
 </head>
 <body>
     <h1>Hello Gamers</h1>
-    <iframe src="demo_iframe.htm" name="iframe_a" height="100%" width="100%" title="Iframe Example"></iframe>
-
-    <p><a href="https://www.youyube.com" target="iframe_a">Youtube</a></p>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        
+        // Create gradient
+        var grd = ctx.createLinearGradient(0, 0, 200, 0);
+        grd.addColorStop(0, "black");
+        grd.addColorStop(1, "gray");
+        
+        // Fill with gradient
+        ctx.fillStyle = grd;
+        ctx.fillRect(10, 10, 150, 80);
+    </script>
 </body>
 </html>
